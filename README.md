@@ -289,7 +289,7 @@ Type: [string][52]
 
 ### trigger
 
-Get a macro that belongs to this device
+Trigger this macro on the brain
 
 Returns **[Promise][54]** 
 
