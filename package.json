@@ -1,6 +1,6 @@
 {
   "name": "neeo-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API Wrapper For NEEO Brain API",
   "repository": {
     "type": "git",
