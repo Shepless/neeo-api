@@ -14,19 +14,26 @@
 -   [Room][10]
     -   [getDevice][11]
 -   [Device][12]
-    -   [getMacro][13]
--   [Macro][14]
-    -   [trigger][15]
--   [Recipe][16]
-    -   [getDevice][17]
-    -   [powerOn][18]
-    -   [powerOff][19]
+    -   [brain][13]
+    -   [name][14]
+    -   [roomName][15]
+    -   [type][16]
+    -   [manufacturer][17]
+    -   [key][18]
+    -   [macros][19]
+    -   [getMacro][20]
+-   [Macro][21]
+    -   [trigger][22]
+-   [Recipe][23]
+    -   [getDevice][24]
+    -   [powerOn][25]
+    -   [powerOff][26]
 
 ## discoverBrains
 
 Find all brains connected to the local network
 
-Returns **[Array][20]&lt;[NeeoBrain][21]>** All discovered brains on the local network
+Returns **[Array][27]&lt;[NeeoBrain][28]>** All discovered brains on the local network
 
 ## NeeoBrain
 
@@ -36,31 +43,31 @@ Class representing a NEEO Brain.
 
 Get system info.
 
-Returns **[Promise][22]** 
+Returns **[Promise][29]** 
 
 ### blink
 
 Make the LED blink
 
-Returns **[Promise][22]** 
+Returns **[Promise][29]** 
 
 ### getRooms
 
 Get all rooms
 
-Returns **[Promise][22]&lt;[Array][20]&lt;[Room][23]>>** 
+Returns **[Promise][29]&lt;[Array][27]&lt;[Room][30]>>** 
 
 ### getRecipes
 
 Get all recipes
 
-Returns **[Promise][22]&lt;[Array][20]&lt;[Recipe][24]>>** 
+Returns **[Promise][29]&lt;[Array][27]&lt;[Recipe][31]>>** 
 
 ### getActiveRecipes
 
 Get all active recipes
 
-Returns **[Promise][22]&lt;[Array][20]&lt;[Recipe][24]>>** 
+Returns **[Promise][29]&lt;[Array][27]&lt;[Recipe][31]>>** 
 
 ### setForwardActions
 
@@ -68,18 +75,18 @@ Set the forward actions endpoint config
 
 **Parameters**
 
--   `options` **[Object][25]** The forward actions options
-    -   `options.host` **[string][26]** The forward actions server host
-    -   `options.port` **[string][26]** The forward actions server port
-    -   `options.path` **[string][26]** The forward actions server path (optional, default `'/neeo'`)
+-   `options` **[Object][32]** The forward actions options
+    -   `options.host` **[string][33]** The forward actions server host
+    -   `options.port` **[string][33]** The forward actions server port
+    -   `options.path` **[string][33]** The forward actions server path (optional, default `'/neeo'`)
 
-Returns **[Promise][22]** 
+Returns **[Promise][29]** 
 
 ### deleteForwardActions
 
 Delete the forward actions endpoint config
 
-Returns **[Promise][22]** 
+Returns **[Promise][29]** 
 
 ## Room
 
@@ -91,13 +98,55 @@ Get a device that belongs to this room
 
 **Parameters**
 
--   `name` **[string][26]** The name of the device to get
+-   `name` **[string][33]** The name of the device to get
 
-Returns **[Device][27]** The matched device
+Returns **[Device][34]** The matched device
 
 ## Device
 
 Class representing a NEEO Device.
+
+### brain
+
+The brain this device belongs to
+
+Type: [NeeoBrain][28]
+
+### name
+
+The name of the device
+
+Type: [string][33]
+
+### roomName
+
+The name of the room this device is assigned to
+
+Type: [string][33]
+
+### type
+
+The device type
+
+Type: [string][33]
+
+### manufacturer
+
+The device manufacturer name
+
+Type: [string][33]
+
+### key
+
+The device key
+
+Type: [string][33]
+
+### macros
+
+The macros for this device
+
+Type: [Array][27]&lt;[Macro][35]>
 
 ### getMacro
 
@@ -105,9 +154,9 @@ Get a macro that belongs to this device
 
 **Parameters**
 
--   `name` **[string][26]** The name of the macro to get
+-   `name` **[string][33]** The name of the macro to get
 
-Returns **[Macro][28]** 
+Returns **[Macro][35]** 
 
 ## Macro
 
@@ -117,7 +166,7 @@ Class representing a NEEO Device Macro.
 
 Get a macro that belongs to this device
 
-Returns **[Promise][22]** 
+Returns **[Promise][29]** 
 
 ## Recipe
 
@@ -129,21 +178,21 @@ Get a device that belongs to this recipe
 
 **Parameters**
 
--   `name` **[string][26]** The name of the device to get
+-   `name` **[string][33]** The name of the device to get
 
-Returns **[Device][27]** The matched device
+Returns **[Device][34]** The matched device
 
 ### powerOn
 
 Power on the recipe
 
-Returns **[Promise][22]** 
+Returns **[Promise][29]** 
 
 ### powerOff
 
 Power off the recipe
 
-Returns **[Promise][22]** 
+Returns **[Promise][29]** 
 
 [1]: #discoverbrains
 
@@ -169,34 +218,48 @@ Returns **[Promise][22]**
 
 [12]: #device
 
-[13]: #getmacro
+[13]: #brain
 
-[14]: #macro
+[14]: #name
 
-[15]: #trigger
+[15]: #roomname
 
-[16]: #recipe
+[16]: #type
 
-[17]: #getdevice-1
+[17]: #manufacturer
 
-[18]: #poweron
+[18]: #key
 
-[19]: #poweroff
+[19]: #macros
 
-[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[20]: #getmacro
 
-[21]: #neeobrain
+[21]: #macro
 
-[22]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[22]: #trigger
 
-[23]: #room
+[23]: #recipe
 
-[24]: #recipe
+[24]: #getdevice-1
 
-[25]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[25]: #poweron
 
-[26]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[26]: #poweroff
 
-[27]: #device
+[27]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[28]: #macro
+[28]: #neeobrain
+
+[29]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+[30]: #room
+
+[31]: #recipe
+
+[32]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[33]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[34]: #device
+
+[35]: #macro
