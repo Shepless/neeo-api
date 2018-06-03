@@ -1,10 +1,14 @@
 {
   "name": "neeo-api",
   "version": "1.0.0",
-  "description": "API Wrapper For NEEO Brains",
+  "description": "API Wrapper For NEEO Brain API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shepless/neeo-api"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs": "documentation build index.js -f md -o ./README.md"
   },
   "author": "Shepless (http://shepless.github.io/)",
   "license": "ISC",
@@ -12,5 +16,8 @@
     "axios": "^0.18.0",
     "bonjour": "^3.5.0",
     "object.values": "^1.0.4"
+  },
+  "devDependencies": {
+    "documentation": "^7.1.0"
   }
 }
