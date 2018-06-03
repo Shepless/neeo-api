@@ -8,7 +8,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "docs": "documentation build index.js -f md -o ./README.md"
+    "docs": "documentation build index.js -f md -o ./README.md",
+    "prepublish": "npm run docs"
   },
   "author": "Shepless (http://shepless.github.io/)",
   "license": "ISC",
