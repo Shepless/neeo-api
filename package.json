@@ -1,0 +1,16 @@
+{
+  "name": "neeo-api",
+  "version": "1.0.0",
+  "description": "API Wrapper For NEEO Brains",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shepless (http://shepless.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bonjour": "^3.5.0",
+    "object.values": "^1.0.4"
+  }
+}
